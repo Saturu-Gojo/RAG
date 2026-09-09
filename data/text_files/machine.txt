@@ -1,0 +1,63 @@
+
+
+
+```text
+1. Forward pass   → input flows through layers → prediction
+2. Compute loss   → compare prediction vs. target
+3. Backpropagation→ calculate gradients of loss w.r.t. weights
+4. Update weights → w = w − learning_rate × gradient
+5. Repeat over epochs until loss converges
+```
+
+---
+
+## Common Architectures
+
+| Network | Best For |
+|---------|----------|
+| **ANN / MLP** | Tabular / structured data |
+| **CNN** | Images, vision tasks |
+| **RNN / LSTM** | Sequences, time series |
+| **Transformer** | NLP, LLMs, attention-based tasks |
+| **Autoencoder** | Compression, anomaly detection |
+| **GAN** | Image generation |
+
+---
+
+## Key Hyperparameters
+
+- **Learning rate** — step size (too high = diverge, too low = slow)
+- **Batch size** — samples per gradient update
+- **Epochs** — full passes over the dataset
+- **Dropout** — randomly disables neurons to prevent overfitting
+
+---
+
+## Common Pitfalls
+
+- **Overfitting** → use dropout, regularization, more data
+- **Vanishing gradients** → use ReLU, batch norm, residual connections
+- **Underfitting** → add layers/neurons, train longer
+
+---
+
+## Minimal Example (PyTorch)
+
+```python
+import torch.nn as nn
+
+model = nn.Sequential(
+    nn.Linear(784, 128),
+    nn.ReLU(),
+    nn.Dropout(0.2),
+    nn.Linear(128, 10)   # 10 output classes
+)
+
+loss_fn = nn.CrossEntropyLoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+```
+
+---
+
+Want this as a **PDF/README**, expanded with a **full training loop**, or focused on a specific area (CNNs, Transformers, etc.)?
+    

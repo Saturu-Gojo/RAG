@@ -1,0 +1,21 @@
+
+        Deep Learning — Quick Reference
+
+        ## What It Is
+        Deep learning is a subset of machine learning that uses **multi-layered neural networks** to automatically learn hierarchical features from raw data.
+
+
+
+---
+
+## Core Building Blocks
+
+| Concept | Meaning |
+|---------|---------|
+| **Neuron** | Computes `output = activation(w·x + b)` |
+| **Layer** | Stack of neurons (input → hidden → output) |
+| **Weights / Bias** | Learnable parameters tuned during training |
+| **Activation** | Adds non-linearity (ReLU, Sigmoid, Tanh, Softmax) |
+| **Loss Function** | Measures error (MSE, Cross-Entropy) |
+| **Optimizer** | Updates weights (SGD, Adam) |
+
